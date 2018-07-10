@@ -1,0 +1,2 @@
+college,book,pen,copy,school,parents,office,hospital
+kuchbhi,London,Paris
