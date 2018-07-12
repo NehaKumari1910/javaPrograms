@@ -7,6 +7,10 @@ public class Utility {
 		String username=scn.nextLine();
 		return username;
 	}
+	/**
+	 * 
+	 * @return 
+	 */
 	public static int getInteger(){
 		
 	int num=scn.nextInt();

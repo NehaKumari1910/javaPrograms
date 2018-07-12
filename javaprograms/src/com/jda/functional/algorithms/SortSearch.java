@@ -23,7 +23,10 @@ public class SortSearch {
 			case 1:
 				System.out.println("Enter size of the integer array and elements of array:");
 				int[] arr1 = Utility.getOneDArray();
+				long startTime=System.currentTimeMillis();
 				int[] sortedArr = Utility.InsertionsortInt(arr1);
+				long elapsedTime=System.currentTimeMillis()-startTime;
+				System.out.println("Time take by insertion sort is :"+elapsedTime);
 				for (int i = 0; i < sortedArr.length; i++) {
 					System.out.println(sortedArr[i]);
 				}
@@ -39,10 +42,14 @@ public class SortSearch {
 			case 3:
 				System.out.println("Enter size of the integer array and elements of array:");
 				int[] arr2 = Utility.getOneDArray();
+			
 				int[] sortedArr1 = Utility.InsertionsortInt(arr2);
 				System.out.println("Enter element to be searched:");
 				int item = Utility.getInteger();
+				long startTime1=System.currentTimeMillis();
 				int idx = Utility.BinarySearchInt(sortedArr1, item);
+				long elapsedTime1=System.currentTimeMillis()-startTime1;
+				System.out.println("Time take by Binary search is :"+elapsedTime1);
 				if (idx != -1)
 					System.out.println("Item found " + idx);
 				else
@@ -59,7 +66,11 @@ public class SortSearch {
 				System.out.println("Enter element to be searched:");
 				Utility.getString();
 				String item2 = Utility.getString();
+				long startTime2=System.currentTimeMillis();
 				boolean flag = Utility.BinarySearchString(sortedArr3, item2);
+				
+				long elapsedTime2=System.currentTimeMillis()-startTime2;
+				System.out.println("Time take by insertion sort is :"+elapsedTime2);
 				if (flag == true)
 					System.out.println("Item found ");
 				else
@@ -68,7 +79,10 @@ public class SortSearch {
 			case 5:
 				System.out.println("Enter size of the integer array and elements of array:");
 				int[] arr4 = Utility.getOneDArray();
+				long startTime3=System.currentTimeMillis();
 				int[] sortedArr5 = Utility.BubblesortInt(arr4);
+				long elapsedTime3=System.currentTimeMillis()-startTime3;
+				System.out.println("Time take by insertion sort is :"+elapsedTime3);
 				for (int i = 0; i < sortedArr5.length; i++) {
 					System.out.println(sortedArr5[i]);
 				}
@@ -76,7 +90,10 @@ public class SortSearch {
 			case 6:
 				System.out.println("Enter size of the integer array and elements of array:");
 				String[] arr5 = Utility.getOneDArrayString();
+				long startTime4=System.currentTimeMillis();
 				String[] sortedArr6 = Utility.BubblesortString(arr5);
+				long elapsedTime4=System.currentTimeMillis()-startTime4;
+				System.out.println("Time take by insertion sort is :"+elapsedTime4);
 				for (int i = 0; i < sortedArr6.length; i++) {
 					System.out.println(sortedArr6[i]);
 				}

@@ -10,13 +10,13 @@ import com.jda.functional.utility.Utility;
 public class WordSearch {
 
 	public static void main(String[] args) throws Exception {
-	  File file1=new File("/home/bridgelabz/Javaprograms/Functional_programs/functional/src/com/jda/functional/algorithms/file.txt");
+	  File file1=new File("/home/bridgelabz/Javaprograms/Functional_programs/javaprograms/src/com/jda/functional/algorithms/file.txt");
 	  BufferedReader br=new BufferedReader(new FileReader(file1));
 	  String st ;
 	  String str="";
 	  while((st=br.readLine())!=null){
 		 
-		       str=str+st.toLowerCase();
+		       str=str+st.toLowerCase()+',';
 	  }
 	  br.close();
 	  String[] arr=str.split(",");
