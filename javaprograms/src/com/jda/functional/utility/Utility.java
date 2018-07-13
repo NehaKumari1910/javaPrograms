@@ -7,9 +7,14 @@ public class Utility {
 		String username=scn.nextLine();
 		return username;
 	}
+public static long getLong(){
+		
+		long num=scn.nextLong();
+		return num;
+	}
 	/**
-	 * 
-	 * @return 
+	 * scan integer
+	 * @return integer
 	 */
 	public static int getInteger(){
 		

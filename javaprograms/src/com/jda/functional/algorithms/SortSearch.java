@@ -26,7 +26,7 @@ public class SortSearch {
 				long startTime=System.currentTimeMillis();
 				int[] sortedArr = Utility.InsertionsortInt(arr1);
 				long elapsedTime=System.currentTimeMillis()-startTime;
-				System.out.println("Time take by insertion sort is :"+elapsedTime);
+				System.out.println("Time taken by insertion sort is :"+elapsedTime);
 				for (int i = 0; i < sortedArr.length; i++) {
 					System.out.println(sortedArr[i]);
 				}
@@ -47,9 +47,10 @@ public class SortSearch {
 				System.out.println("Enter element to be searched:");
 				int item = Utility.getInteger();
 				long startTime1=System.currentTimeMillis();
+				System.out.println(startTime1);
 				int idx = Utility.BinarySearchInt(sortedArr1, item);
 				long elapsedTime1=System.currentTimeMillis()-startTime1;
-				System.out.println("Time take by Binary search is :"+elapsedTime1);
+				System.out.println("Time taken by Binary search is :"+elapsedTime1);
 				if (idx != -1)
 					System.out.println("Item found " + idx);
 				else
