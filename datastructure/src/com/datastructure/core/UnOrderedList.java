@@ -12,8 +12,8 @@ public class UnOrderedList {
 	public static void main(String[] args) throws Exception {
 		LinkedList<String> list=new LinkedList<String>();
 		//LinkedList<Integer> list=new LinkedList<>();
-		  File file1=new File("/home/bridgelabz/Javaprograms/Functional_programs/javaprograms/src/com/jda/functional/algorithms/file.txt");
-		  BufferedReader br=new BufferedReader(new FileReader(file1));
+		  File file=new File("/home/bridgelabz/javaPrograms/javaprograms/src/com/jda/functional/algorithms/file.txt");
+		  BufferedReader br=new BufferedReader(new FileReader(file));
 		  String st ;
 		  String str="";
 		  while((st=br.readLine())!=null){
@@ -43,14 +43,7 @@ public class UnOrderedList {
 			  list.add(item);
 		  }
 		  list.printList();
-		  System.out.print(list);
-		  {
-			  
-		  }
-			  
 		}
-	
-		
 	}
 		
 

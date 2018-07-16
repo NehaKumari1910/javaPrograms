@@ -5,27 +5,35 @@ package com.datastructure.utility;
  *
  * @param <T> generic parameter
  */
-class Node<T>
-{
-	T data;
-	Node<T> next;
-}
+
 public class LinkedList<T>
 {
+	private class Node<T>
+	{
+		private T data;
+		private Node<T> next;
+		
+		public Node() {		}
+
+		public Node(T data) {
+			super();
+			this.data = data;
+			this.next = null;
+		}
+	}
+	//head of the list
+	private Node<T> head; 
+	
 	/**
-	 * head of the list
-	 */
-	Node<T> head; 
-	/**
-	 * Insert a node at the end of list
+	 * This method for insert data into LinkedList algo.
+	 * @param value Generic value
 	 */
 	public void add(T value)
 	{
 		/**
 		 * allocates memory for node and put value in data part of node
 		 */
-		Node<T> new_node=new Node<T> ();
-		new_node.data=value;
+		Node<T> new_node=new Node<T> (value);
 		/**
 		 * if head is null then make the new node as head.
 		 */
@@ -64,8 +72,8 @@ public class LinkedList<T>
 	public boolean contains(T item)
 	{
 		Node<T> temp=head;
-		System.out.println(temp.data);
-		System.out.println(item);
+		//System.out.println(temp.data);
+		//System.out.println(item);
 		while(temp!=null)
 		{
 			if(temp.data.equals(item))
@@ -98,8 +106,7 @@ public class LinkedList<T>
 	 */
 	public void  addInAscending(T item)
 	{
-		Node<T> new_node=new Node<T> ();
-		new_node.data=item;
+		Node<T> new_node=new Node<T> (item);
 		if(head==null)
 		{
 			new_node.next=null;
@@ -112,17 +119,16 @@ public class LinkedList<T>
 		}
 		else
 		{
-		Node<T> ptr=head;
-		Node<T> pre=head,nxt=null;
-		while(ptr!=null && (int)ptr.data<(int)item)
-		{
-			pre=ptr;
-			ptr=ptr.next;
-		}
-		nxt=pre.next;
-		pre.next=new_node;
-		new_node.next=nxt;
-		
+			Node<T> ptr=head;
+			Node<T> pre=head,nxt=null;
+			while(ptr!=null && (int)ptr.data<(int)item)
+			{
+				pre=ptr;
+				ptr=ptr.next;
+			}
+			nxt=pre.next;
+			pre.next=new_node;
+			new_node.next=nxt;
 		}
 	}
 }
