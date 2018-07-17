@@ -33,5 +33,9 @@ public class Stack
 	    {
 	    		return stk.length;
 	    }
+	    public char getPeek()
+	    {
+	   	 return stk[top];
+	    }
 	
 }
