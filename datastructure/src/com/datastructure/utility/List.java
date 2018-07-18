@@ -30,7 +30,6 @@ public class List {
 				ptr = ptr.next;
 			ptr.next = new_node;
 		}
-		// return head.data;
 	}
 
 	/**

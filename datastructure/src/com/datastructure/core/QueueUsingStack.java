@@ -2,6 +2,13 @@ package com.datastructure.core;
 import com.datastructure.utility.StackLinkedList;
 
 public class QueueUsingStack {
+	/**
+	 * This method is for calculating the day of the week.
+	 * @param m month
+	 * @param d date=1
+	 * @param y year
+	 * @return day of week
+	 */
 		public static int dayOfWeek(int m,int d,int y)
 	   {
 	   	int y0=y-(14-m)/12;
@@ -11,7 +18,7 @@ public class QueueUsingStack {
 			return d0;
 	   }
 		  public static void main(String [] args)
-		  { 
+		  {  
 			  int month=Integer.parseInt(args[0]);
 				int year=Integer.parseInt(args[1]);
 				  int day=dayOfWeek(month,1,year);

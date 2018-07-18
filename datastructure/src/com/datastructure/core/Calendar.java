@@ -14,7 +14,7 @@ public class Calendar {
 		int year=Integer.parseInt(args[1]);
 		  int day=dayOfWeek(month,1,year);
 			System.out.println("Day of Week is "+day+".");
-			int []arr=new int[37];
+			int []arr=new int[39];
 			int j=0,k=0;
 			System.out.println("S M T W TH F S");
 			for(int i=1;i<32;i++)
@@ -22,7 +22,7 @@ public class Calendar {
 				arr[day+k]=i;
 				k++;
 			}
-			for(int i=0;i<37;i++)
+			for(int i=0;i<39;i++)
 			{
 				if(arr[i]==0)
 					System.out.print("  ");

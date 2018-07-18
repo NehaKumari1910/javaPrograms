@@ -4,7 +4,7 @@ import com.datastructure.utility.Stack;
 import com.jda.functional.utility.Utility;
 
 /**
- * Check for Balance String
+ *
  * @author bridgelabz
  */
 public class BalancedParantheses {
@@ -14,13 +14,12 @@ public class BalancedParantheses {
 		System.out.println("Enter arithmetic expression:");
 		String exp=Utility.getString();
 		char[] charArr=exp.toCharArray();
-		char ch;
 		for(int i=0;i<charArr.length;i++)
 		{
 			if(charArr[i]=='(' || charArr[i]=='{' || charArr[i]=='[')
 			    st.push(charArr[i]);
-			else if(!st.isEmpty() && charArr[i]==')' && st.getPeek()=='(')
-				 ch = st.pop();
+			else if(!st.isEmpty() && ((charArr[i]==')' && st.getPeek()=='(') || (charArr[i]=='}' && st.getPeek()=='{') ||(charArr[i]==']' && st.getPeek()=='[')))
+				 st.pop();
 			else
 				st.push(charArr[i]);
 		}
