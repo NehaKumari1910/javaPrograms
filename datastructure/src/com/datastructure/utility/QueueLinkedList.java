@@ -1,5 +1,6 @@
 package com.datastructure.utility;
 
+import com.object.utility.Player;
 
 public class QueueLinkedList<T>
 {
@@ -82,6 +83,18 @@ public class QueueLinkedList<T>
 							System.out.print(current.data+" ");
 					if(((int)current.data+day)%7==0)
 						   System.out.println();
+					current=current.next;
+				}
+				System.out.println();
+			}
+			public void printDeckOfCards()
+			{
+				Node<T> current=front;
+				while(current!=null)
+				{
+					 Player ply=new Player();
+					 ply=(Player) current.data;
+							System.out.print(ply.suit+ply.rank);
 					current=current.next;
 				}
 				System.out.println();
