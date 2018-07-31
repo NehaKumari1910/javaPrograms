@@ -1,0 +1,19 @@
+[ {
+  "name" : "flipkart",
+  "noOfshares" : 10000,
+  "price" : 300,
+  "symbol":"$"
+},
+{
+  "name" : "facebook",
+  "noOfshares" : 1500,
+  "price" : 500,
+  "symbol":"&"
+},
+{
+  "name" : "google",
+  "noOfshares" : 150000,
+  "price" : 5000,
+  "symbol":"#"
+}
+]

@@ -26,15 +26,21 @@ public class PlayersAndCards {
 				int randSuit=rand.nextInt(3);
 			   int randRank=rand.nextInt(12);
 				Player plyr=new Player();
-				plyr.suit=suits[randSuit];
-				plyr.rank=ranks[randRank];
+				plyr.setSuit(suits[randSuit]);
+				plyr.setRank(ranks[randRank]);
 				que.push(plyr);
 			}
 			else
 				break;
 		}
-	
-		que.printDeckOfCards();
+		Player ply;
+		int i=1;
+		while(!que.isEmpty())
+		{
+           ply=que.dequeue();
+         System.out.println("Player"+i+"=>"+ply.getSuit()+"  "+ply.getRank());
+         i++;
+		}
 
 	}
 

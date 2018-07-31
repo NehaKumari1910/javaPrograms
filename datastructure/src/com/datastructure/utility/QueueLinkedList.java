@@ -1,6 +1,5 @@
 package com.datastructure.utility;
 
-import com.object.utility.Player;
 
 public class QueueLinkedList<T>
 {
@@ -59,11 +58,22 @@ public class QueueLinkedList<T>
 			/**
 			 * pop element from list
 			 * @param item
+			 * @return 
 			 */
+			public T dequeue()
+			{
+				if(!isEmpty()){
+					Node<T> temp=front;
+				front=front.next;
+				return temp.data;
+				}
+				return null;
+			}
 			public void pop()
 			{
 				if(!isEmpty()){
 				front=front.next;
+				
 				}
 			}
 			public boolean isEmpty()
@@ -87,18 +97,7 @@ public class QueueLinkedList<T>
 				}
 				System.out.println();
 			}
-			public void printDeckOfCards()
-			{
-				Node<T> current=front;
-				while(current!=null)
-				{
-					 Player ply=new Player();
-					 ply=(Player) current.data;
-							System.out.print(ply.suit+ply.rank);
-					current=current.next;
-				}
-				System.out.println();
-			}
-	}
+}
+			
 
 
