@@ -1,0 +1,11 @@
+[ {
+  "symbol" : "$",
+  "noOfShares" : 5,
+  "date" : "Thu Aug 02 08:54:21 GMT 2018",
+  "state" : "bought"
+}, {
+  "symbol" : "&",
+  "noOfShares" : 2,
+  "date" : "Thu Aug 02 08:54:21 GMT 2018",
+  "state" : "bought"
+} ]

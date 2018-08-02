@@ -4,6 +4,13 @@ public class CompanyShares {
 	private String symbol;
 	private int noOfShares;
 	private String date;
+	private String state;
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 	public String getSymbol() {
 		return symbol;
 	}
@@ -22,6 +29,4 @@ public class CompanyShares {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
-
 }
