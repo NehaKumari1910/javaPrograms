@@ -38,7 +38,11 @@ public class StockPortfolio {
 				int value=0;
 				if(cs.getSymbol().equals(stock.getSymbol()))
 				{
-				       value=cs.getNoOfShares()*stock.getPrice();
+					if(cs.getState().equals("sold")){
+				       value-=cs.getNoOfShares()*stock.getPrice();
+					}
+					else if(cs.getState().equals("bought"))
+						value+=cs.getNoOfShares()*stock.getPrice();
 				       totalValue+=value;
 				       System.out.println("value of shares of "+stock.getName()+" =" +value);
 				       break;
