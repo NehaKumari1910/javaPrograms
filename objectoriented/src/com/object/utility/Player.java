@@ -1,24 +1,18 @@
 package com.object.utility;
 
+import java.util.ArrayList;
+
 public class Player {
 
-	private String suit;
-	private String rank;
+private static ArrayList<Pair > cards;
 
-	public String getSuit() {
-		return suit;
-	}
+public static ArrayList<Pair> getCards() {
+	return cards;
+}
 
-	public void setSuit(String suit) {
-		this.suit = suit;
-	}
+public static void setCards(ArrayList<Pair> cards) {
+	Player.cards = cards;
+}
 
-	public String getRank() {
-		return rank;
-	}
-
-	public void setRank(String rank) {
-		this.rank = rank;
-	}
-
+	
 }

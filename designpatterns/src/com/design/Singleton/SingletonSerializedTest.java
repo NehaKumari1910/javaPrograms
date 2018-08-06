@@ -23,13 +23,14 @@ package com.design.Singleton;
 	    public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
 	        SerializedSingleton instanceOne = SerializedSingleton.getInstance();
 	        ObjectOutput out = new ObjectOutputStream(new FileOutputStream(
-	                "file.txt"));
+	                "file.ser"));
 	        out.writeObject(instanceOne);
+	        out.flush();
 	        out.close();
 	        
 	        //deserailize from file to object
 	        ObjectInput in = new ObjectInputStream(new FileInputStream(
-	                "file.txt"));
+	                "file.ser"));
 	        SerializedSingleton instanceTwo = (SerializedSingleton) in.readObject();
 	        in.close();
 	        

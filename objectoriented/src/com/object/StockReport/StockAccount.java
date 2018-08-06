@@ -13,6 +13,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
 import com.datastructure.utility.QueueLinkedList;
+import com.datastructure.utility.StackLinkedList;
 import com.jda.functional.utility.Utility;
 import com.object.core.AddressBook;
 import com.object.core.Person;
@@ -23,6 +24,8 @@ public class StockAccount {
 	static Date date=new Date();
 	static String path ="/home/bridgelabz/javaPrograms/objectoriented/src/com/object/StockReport/stockAccount";
 	static ObjectMapper mapper = new ObjectMapper();
+	static StackLinkedList<String> symbols=new StackLinkedList<>();
+	static QueueLinkedList<String> transactions=new QueueLinkedList<>();
 	public static void shares(ArrayList<CompanyShares> share)
 	{
 		for(CompanyShares cs:share)
@@ -94,6 +97,8 @@ public class StockAccount {
 					cs.setDate(date.toString());
 					cs.setState("bought");
 					shareOfPerson.push(cs);
+					symbols.push(symbol);
+					transactions.push(date.toString());
 					return;
 			}
 		}
@@ -139,6 +144,8 @@ public class StockAccount {
 			   cs1.setNoOfShares(sharesSold);	
 			   cs1.setDate(date.toString());
 			   cs1.setState("sold");
+				symbols.push(symbol);
+				transactions.push(date.toString());
 		//	   System.out.println
 			   stk.setNoOfshares(stocksAvailable);
 			   stocks.set(idx, stk);
