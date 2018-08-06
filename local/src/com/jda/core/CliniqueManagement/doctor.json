@@ -1,0 +1,11 @@
+[ {
+  "name" : "Mana Agarwal",
+  "id" : 101,
+  "specialization" : "dgshd",
+  "availability" : "both"
+}, {
+  "name" : "Neha Kumari",
+  "id" : 102,
+  "specialization" : "radiology",
+  "availability" : "pm"
+} ]
